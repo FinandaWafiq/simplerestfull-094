@@ -58,9 +58,12 @@ public class ProductServiceController {
         if (productRepo.containsKey(product.getId())){
            return new ResponseEntity<>("Product key cannot duplicated", HttpStatus.OK);
        }
-      productRepo.put(product.getId(), product);
-      return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
+      else{
+           productRepo.put(product.getId(), product);
+           return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
+       }
    }
+
    
    @RequestMapping(value = "/products")
    public ResponseEntity<Object> getProduct() {
