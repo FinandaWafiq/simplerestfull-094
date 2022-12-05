@@ -44,10 +44,13 @@ public class ProductServiceController {
         if(!productRepo.containsKey(id)){
            return new ResponseEntity<>("Product key is not assign", HttpStatus.OK);
        }
-      productRepo.remove(id);
-      product.setId(id);
-      productRepo.put(id, product);
-      return new ResponseEntity<>("Product is updated successsfully", HttpStatus.OK);
+      else{
+           productRepo.remove(id);
+           product.setId(id);
+           productRepo.put(id, product);
+           return new ResponseEntity<>("Product is updated Successfully", HttpStatus.OK);
+       }
+       
    }
    
    @RequestMapping(value = "/products", method = RequestMethod.POST)
