@@ -11,6 +11,24 @@ package ws.c.ProjectRESTful;
 public class Product {
     private String id;
     private String name;
+    private String jumlah;
+
+    public String getJumlah() {
+        return jumlah;
+    }
+
+    public void setJumlah(String jumlah) {
+        this.jumlah = jumlah;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+    private String harga;
 
     public String getId() {
         return id;
