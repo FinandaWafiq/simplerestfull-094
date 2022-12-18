@@ -71,7 +71,7 @@ public class ProductServiceController {
        }
    }
 
-   
+   //menambahkan kode untuk menjalankan variabel yang akan menampilkan data dengan method GET
    @RequestMapping(value = "/products")
    public ResponseEntity<Object> getProduct() {
       return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);
