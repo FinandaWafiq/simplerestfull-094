@@ -44,6 +44,7 @@ public class ProductServiceController {
       return new ResponseEntity<>("Product is deleted successsfully", HttpStatus.OK);
    }
    
+   //menambahkan kode untuk mengedit data dengan methode PUT (ID-nya sama)
    @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
    public ResponseEntity<Object> updateProduct(@PathVariable("id") String id, @RequestBody Product product) {
         if(!productRepo.containsKey(id)){
