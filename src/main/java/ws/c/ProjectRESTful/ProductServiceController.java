@@ -59,6 +59,7 @@ public class ProductServiceController {
        
    }
    
+   //menambahkan kode untuk create data dengan method POST
    @RequestMapping(value = "/products", method = RequestMethod.POST)
    public ResponseEntity<Object> createProduct(@RequestBody Product product) {
         if (productRepo.containsKey(product.getId())){
