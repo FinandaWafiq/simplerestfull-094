@@ -37,6 +37,7 @@ public class ProductServiceController {
         productRepo.put(almond.getId(), almond);
     }
     
+   //menambahkan kode untuk menjalankan variabel dengan method DELETE
    @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
    public ResponseEntity<Object> delete(@PathVariable("id") String id) { 
       productRepo.remove(id);
